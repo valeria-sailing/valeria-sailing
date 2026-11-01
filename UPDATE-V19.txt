@@ -1,0 +1,23 @@
+VALERIA V19 – DESIGN-FEINSCHLIFF
+
+Neu:
+- Zweiter Hero-Button, klarere Typografie und maritime Bildüberlagerung
+- Mobile Navigation mit funktionierendem Menü und Tastaturbedienung
+- Bewertungsübersicht und neues Layout für alle 9 ausgewählten Gästestimmen
+- Buchungsbereich mit 3 Schritten und ruhigerem Formularlayout
+- Seitliche kleine Karte und kompakte Liste der 19 Törns mit EINER Preisangabe
+- Dreisprachige Texte für alle neuen Inhalte
+
+Unverändert:
+- Alle bestehenden Cloudflare Pages Functions, Adminbereich und iCloud-Konfiguration
+- Törndatenbank, Status und Buchungsfreischaltung (ENABLE_REQUESTS)
+- Datenschutz-/Rechtstexte sind weiter zu finalisieren
+- Keine neue Veröffentlichung von Personenfotos oder HandGegenKoje-Links
+
+DEPLOY:
+1. ZIP entpacken.
+2. INHALT des entpackten Ordners in den Hauptordner des GitHub-Repositories laden.
+3. Bestehende Dateien überschreiben und Commit changes klicken.
+4. In Safari hart neu laden (Cmd+Option+R).
+
+Die GitHub-Dateien muessen direkt index.html, styles.css, app.js, ui.js, images/, functions/ etc. enthalten.
