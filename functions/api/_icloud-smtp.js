@@ -54,6 +54,7 @@ export async function sendICloud(env, { to, subject, text }) {
     writer = socket.writable.getWriter(); reader = socket.readable.getReader();
     await response([220]);
     await command('EHLO valeria-sailing.pages.dev'); await response([250]);
+    await command('STARTTLS'); await response([220]);
     // Release stream locks before STARTTLS. The unencrypted socket is retired by startTls().
     writer.releaseLock(); reader.releaseLock();
     socket = socket.startTls(); pending = '';
