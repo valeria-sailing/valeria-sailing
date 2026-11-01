@@ -1,0 +1,21 @@
+/* Local Leaflet layout CSS: prevents OSM tiles and markers from escaping the map
+   even when third-party CDN stylesheets are blocked by Safari. */
+.leaflet-container{position:relative;overflow:hidden;outline:0;background:#d9e7e8;font:12px/1.5 Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent}
+.leaflet-container *{box-sizing:content-box}
+.leaflet-container .leaflet-pane,.leaflet-container .leaflet-control-container{position:absolute;inset:0}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas{position:absolute;left:0;top:0}
+.leaflet-map-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}
+.leaflet-tile-container{pointer-events:none}.leaflet-tile{width:256px;height:256px;border:0;margin:0;padding:0;max-width:none!important;max-height:none!important;visibility:inherit;user-select:none;-webkit-user-drag:none}
+.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-animated{transform-origin:0 0}
+.leaflet-interactive{cursor:pointer}.leaflet-container svg{max-width:none!important;max-height:none!important}.leaflet-container .leaflet-overlay-pane svg{user-select:none}
+.leaflet-container .leaflet-marker-icon,.leaflet-container .leaflet-marker-shadow{display:block}
+.leaflet-container.leaflet-touch-drag{touch-action:none}.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}
+.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-right{right:0}.leaflet-right .leaflet-control{float:right}
+.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}
+.leaflet-bar{box-shadow:0 1px 5px #0004;border-radius:4px;overflow:hidden}.leaflet-bar a{background:#fff;color:#333;display:block;width:30px;height:30px;line-height:30px;text-align:center;text-decoration:none;font-size:19px;font-weight:bold;border-bottom:1px solid #ccc}.leaflet-bar a:last-child{border-bottom:none}.leaflet-bar a:hover{background:#f4f4f4}
+.leaflet-control-attribution{background:#ffffffe6;padding:0 5px;font:10px/1.5 Arial,sans-serif;color:#333}.leaflet-control-attribution a{color:#1468a0;text-decoration:none}
+.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{background:#fff;border-radius:10px;box-shadow:0 3px 15px #0004;padding:1px}.leaflet-popup-content{margin:13px 18px;line-height:1.4;white-space:nowrap}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;background:white;transform:rotate(45deg);box-shadow:0 3px 14px #0003}.leaflet-popup-close-button{position:absolute;right:4px;top:4px;width:20px;height:20px;color:#666;text-align:center;font:18px Arial!important;z-index:1}.leaflet-popup-close-button:hover{color:#222}
+.leaflet-tooltip{position:absolute;white-space:nowrap;background:white;border:1px solid #ddd;padding:5px 8px;border-radius:4px;box-shadow:0 1px 4px #0002}
+/* Keep map layers inside this box; never cover the photos below. */
+#regionMap{position:relative!important;overflow:hidden!important;isolation:isolate;min-width:0;max-width:100%;contain:layout paint}

@@ -1,0 +1,8 @@
+Valeria V15 – Kartenreparatur
+
+1. Den gesamten Inhalt dieses Ordners in GitHub hochladen.
+2. Neue Datei leaflet-local.css muss im selben Ordner wie index.html liegen.
+3. Commit changes klicken und Cloudflare-Deployment abwarten.
+4. Safari ggf. mit Cmd+Option+R neu laden.
+
+Die Karte nutzt Leaflet-JavaScript weiterhin vom CDN, aber ihre Layout-CSS-Datei ist jetzt lokal und unabhängig von der Stylesheet-CDN-Verfügbarkeit.
