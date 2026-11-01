@@ -1,0 +1,9 @@
+VALERIA WEBSEITE V4 — 1. November 2026
+
+19 öffentlich gelistete Törns in 2027, Preis je 1.500 EUR pro Person laut HandGegenKoje. Zusätzlich Bordkasse 150–200 EUR p.P./Woche laut Inserat. Verfügbarkeit ist NICHT live synchronisiert.
+
+9 ausgewählte positive 5-Sterne-Bewertungen, als Kurzfassungen (nicht wörtlich) dreisprachig wiedergegeben. Die negative Bewertung ist nicht auf der eigenen Webseite abgedruckt; Link zu allen Originalbewertungen bei HandGegenKoje ist vorhanden.
+
+WICHTIG: Buchungssystem, Zahlung und Cloudflare D1 sind noch NICHT aktiv. Anfrage geht vorläufig über HandGegenKoje.
+
+UPDATE: Dateien dieses Pakets im GitHub-Hauptordner hochladen und vorhandene Dateien ersetzen (vor allem app.js, index.html und styles.css). Anschließend Cloudflare-Deployment kontrollieren.
