@@ -1,0 +1,13 @@
+VALERIA V9 – iCloud SMTP
+
+1. Alle V9-Dateien in GitHub hochladen, Commit changes; Cloudflare Pages wartet auf erfolgreichen Build.
+2. Cloudflare Pages > valeria-sailing > Settings > Variables and Secrets (Production):
+   ICLOUD_EMAIL = deine vollständige @icloud.com-Adresse (Text)
+   ICLOUD_APP_PASSWORD = dein Apple App-spezifisches Passwort (Secret)
+   ICLOUD_SMTP_ENABLED = true (Text), erst NACH erfolgreichem Test setzen.
+3. Der geschützte Test-Endpunkt lautet POST https://valeria-sailing.pages.dev/api/admin/mail-test
+   Authorization: Bearer <DEIN ADMIN_TOKEN>. Nicht im Browser per URL aufrufbar.
+   Am einfachsten über den Browser: Öffne admin.html, melde dich an und verwende die neue Schaltfläche "Test-E-Mail" (falls bereits in admin.js eingebaut).
+4. Prüfe Posteingang und Spamordner deiner iCloud-Adresse. Die SMTP-Antwort 250 bedeutet Annahme durch Server, nicht garantierte Zustellung.
+5. Rechtsseiten der Website sind noch unvollständig! ENABLE_REQUESTS keinesfalls aktivieren, bevor Impressum, Datenschutz, Buchungsbedingungen und Spam-Schutz fertig sind.
+6. Technischer Vorbehalt: Die SMTP-Verbindung über Cloudflare Workers und Apples iCloud-Server muss live getestet werden. Bei Problemen iCloud-Secret nur in Cloudflare, niemals in GitHub oder im Chat.

@@ -18,4 +18,6 @@ Projekt mit Git-Repository verbinden; dieses Verzeichnis als Basis verwenden. F�
 - Das Formular speichert erst dann Anfragen, wenn Cloudflare Pages Functions und D1 eingerichtet sind. Beim lokalen Öffnen ist der Versand nicht möglich.
 - Vor Veröffentlichung: Impressum, Datenschutz, verbindliche Buchungsbedingungen und geprüfte Gästebewertungen ergänzen.
 - Es wurden keine Törntermine oder Gästebewertungen erfunden.
-- Admin-Zugang aktiviert
+
+## V7 – Anfragen
+Formular mit Statusabfrage und D1-Speicherung (erst nach Setzen ENABLE_REQUESTS=true); Details siehe SETUP-BUCHUNGEN.txt.

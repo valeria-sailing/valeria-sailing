@@ -1,0 +1,14 @@
+VALERIA V8 — E-MAIL-BESTÄTIGUNGEN (RESEND)
+
+1. V8-Dateien nach GitHub hochladen / Commit. Cloudflare Pages veröffentlicht automatisch.
+2. Für den Versand an beliebige Gäste brauchst du eine eigene Domain für den Absender (z.B. valeria-sailing.de), die bei Resend verifiziert ist. Die kostenfreie pages.dev-Adresse ist dafür normalerweise NICHT ausreichend. Eine eigene Domain kostet in der Regel Geld.
+3. Konto unter https://resend.com erstellen. Domain hinzufügen, angezeigte DNS-Einträge anlegen und verifizieren. Danach API-Key erstellen. Niemals nach GitHub hochladen.
+4. Cloudflare Pages -> Settings -> Variables and Secrets (Production):
+   RESEND_API_KEY  -> als verschlüsseltes Secret
+   EMAIL_FROM     -> als Textvariable, z.B. Valeria <ahoi@deine-domain.example> (MUSS eine verifizierte Domain sein)
+   OWNER_EMAIL    -> als Textvariable, deine Empfängeradresse für Benachrichtigungen
+5. Neu deployen. Noch NICHT ENABLE_REQUESTS auf true setzen, solange Impressum, Datenschutz und rechtlich geprüfte Buchungsbedingungen fehlen; legal.html ist bisher ein Platzhalter!
+6. Wenn die rechtlichen Seiten fertig sind: ENABLE_REQUESTS=true setzen und neu deployen. Mit einer Testanfrage prüfen: Datenbankeintrag im Adminbereich, Gast-E-Mail und Besitzer-E-Mail.
+7. Versandfehler: Anfrage bleibt in D1 gespeichert. Webseite meldet ausdrücklich, wenn keine E-Mail versendet wurde. Für den Livebetrieb später eine Mail-Statusspalte mit Wiederholungslogik ergänzen.
+8. Achtung: Nach Annahme durch den Eigner werden bisher weder Zahlungslinks noch rechtswirksame Buchungsbestätigungen automatisch versendet. Das ist eine spätere Ausbaustufe.
+9. Zum Schutz gegen Spam/Abuse vor öffentlicher Aktivierung Turnstile und Rate-Limits hinzufügen.

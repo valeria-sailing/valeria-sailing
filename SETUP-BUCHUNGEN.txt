@@ -1,0 +1,10 @@
+VALERIA – VERSION 7: BUCHUNGSANFRAGEN
+
+1. Lade alle V7-Dateien ins GitHub-Repository hoch (Unterordner beibehalten). Cloudflare Pages deployt automatisch.
+2. In Cloudflare muss D1 als DB gebunden sein. Tabellen trips und requests existieren bereits.
+3. Wichtig: Das Formular ist zunächst ABSICHTLICH DEAKTIVIERT, bis Impressum, Datenschutz und Buchungsbedingungen tatsächlich ausgefüllt und geprüft sind. Die Datei legal.html enthält noch Platzhalter. Vor Aktivierung unbedingt anpassen.
+4. Danach: Cloudflare Pages -> Settings -> Variables and Secrets: ENABLE_REQUESTS als Textvariable mit Wert true anlegen (Production). Neu deployen.
+5. Ein Test über die Website speichert eine Anfrage in D1 requests. Unter /admin.html im Verwaltungsbereich erscheinen neue Anfragen. Keine E-Mail-Benachrichtigung, keine Zahlungsabwicklung und keine automatische Zusage in V7.
+6. Alle Wünsche sind status=pending. Es werden keine Kojen automatisch reserviert oder bezahlt.
+7. Sichere Funktionen gegen automatisierte Massenanfragen (Cloudflare Turnstile/Rate limiting) vor breiter Bewerbung ergänzen. Aktuell nur Honeypot und Inputprüfung.
+8. Datenschutz: Gäste-Daten werden in D1 gespeichert. Aufbewahrung, Löschung und Datenschutzhinweise erforderlich. Datenschutzseite ist noch nicht fertig.
