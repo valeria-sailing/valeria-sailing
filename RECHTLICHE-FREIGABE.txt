@@ -1,0 +1,12 @@
+VALERIA V13 — VOR FREISCHALTUNG VON VERBINDLICHEN BUCHUNGEN
+
+1. Vollständige Anbieteridentität und ladungsfähige Anschrift sowie E-Mail-Kontakt für das Impressum ergänzen. Nicht automatisch aufgrund der steuerlichen Liebhaberei weglassen.
+2. Datenschutzinformationen zu Cloudflare, iCloud, Speicherfristen, etwaigen Drittlandtransfers und Betroffenenrechten vervollständigen.
+3. Rücktritt/Stornierung rechtlich prüfen und transparente Bedingungen hinzufügen.
+4. Einordnung (privates Mitsegeln / Reiserecht) fachkundig prüfen lassen.
+5. Vor Aktivierung: Bot-Schutz und Ende-zu-Ende-Tests durchführen.
+6. ENABLE_REQUESTS bleibt derzeit ausgeschaltet; keine Onlinezahlung aktiviert.
+7. Zahlungsmodell für 2027: 50% nach persönlicher Annahme, Rest 14 Tage vor Beginn; bei später Annahme 100%. Alte Fristen nicht übernehmen.
+8. Keine IBAN aus der Altvereinbarung ungeprüft öffentlich übernehmen.
+9. Alle HandGegenKoje-Links bleiben entfernt.
+10. Hinweis: Die Buchungsdetails in der automatisch versandten E-Mail werden beim Freischalten erneut auf Übereinstimmung mit diesen Bedingungen geprüft.

@@ -1,0 +1,12 @@
+VALERIA V14 – Ionisches Meer
+
+1. Inhalt dieses Ordners (nicht den Elternordner) in das GitHub-Repository hochladen.
+2. Bestehende Dateien ersetzen, auch app.js, styles.css und index.html.
+3. Neue Datei region.js mit hochladen.
+4. Commit changes -> Cloudflare deployt automatisch.
+
+Keine Cloudflare-Secrets oder Datenbank-Änderungen erforderlich.
+Buchungsformular bleibt gemäß bisheriger Freigabesperre deaktiviert.
+Karte benötigt Internet für OpenStreetMap/Leaflet.
+Fotos: ausschließlich aus bestehendem Valeria-Bildbestand.
+Korinth-Kanal ist nur ein mögliches Highlight, nicht Teil jedes Törns.

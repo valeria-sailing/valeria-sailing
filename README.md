@@ -21,3 +21,6 @@ Projekt mit Git-Repository verbinden; dieses Verzeichnis als Basis verwenden. FÃ
 
 ## V7 â€“ Anfragen
 Formular mit Statusabfrage und D1-Speicherung (erst nach Setzen ENABLE_REQUESTS=true); Details siehe SETUP-BUCHUNGEN.txt.
+
+
+V10: Automatischer iCloud-Versand bei Anfrage/Buchungswunsch vorbereitet. Siehe SETUP-V10.txt.

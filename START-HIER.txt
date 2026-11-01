@@ -1,0 +1,6 @@
+VALERIA V13 – Mitsegelregeln + Datenschutz-Entwurf (DE/EN/RU)
+
+Dieses Paket ersetzt V12. Dateien einschließlich Unterordner in GitHub-Repository übertragen.
+Die 19 D1-Törns, 9 Bewertungen, Fotoauswahl ohne erkennbare Personen und iCloud-Test bleiben erhalten.
+ENABLE_REQUESTS vorerst deaktiviert lassen.
+Siehe RECHTLICHE-FREIGABE.txt und legal.html für ausstehende Pflichtangaben.
