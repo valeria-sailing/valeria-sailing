@@ -13,6 +13,7 @@ export async function onRequestPost({request,env}) {
   const name=String(b.name||'').trim(), email=String(b.email||'').trim(), trip=String(b.trip_id||'').trim();
   const guests=Number(b.guests),kind=String(b.kind||''),message=String(b.message||'').trim();
   const language=['de','en','ru'].includes(b.language)?b.language:'de';
+  if(kind==='booking' && env.ENABLE_BINDING_BOOKINGS!=='true')return json({error:'Binding booking requests not yet enabled'},503);
   if(kind==='booking' && !mailReady(env))return json({error:'Booking email service temporarily unavailable'},503);
   if(!name||name.length>120||!/^\S+@\S+\.\S+$/.test(email)||email.length>200||!Number.isInteger(guests)||guests<1||guests>4||!['inquiry','booking'].includes(kind)||message.length>3000||!trip||!b.privacy)
     return json({error:'Please check all required fields'},400);

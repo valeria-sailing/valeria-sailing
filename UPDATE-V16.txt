@@ -1,0 +1,11 @@
+VALERIA V16 — EIGENE ILLUSTRIERTE KARTE UND ANFRAGEN
+
+1. Alle Dateien auf GitHub hochladen; alte region.js und leaflet-local.css bei Gelegenheit aus dem Repository entfernen.
+2. SVG-Karte liegt unter images/revier-illustration.svg. Keine Google-/OSM-Kartenkacheln oder externe Styles nötig. Die Landformen sind bewusst illustrativ, NICHT nautisch exakt.
+3. Öffentliche unverbindliche Anfragen: In Cloudflare Pages > valeria-sailing > Settings > Variables and Secrets: ENABLE_REQUESTS = true (Production), danach neues Deployment auslösen.
+4. ICLOUD_SMTP_ENABLED = true (Production), damit die bereits getestete iCloud-SMTP-Funktion für Anfragen genutzt wird. Existierende ICLOUD_EMAIL und ICLOUD_APP_PASSWORD bleiben unverändert.
+5. ENABLE_BINDING_BOOKINGS NICHT setzen; die Website lässt verbindliche Buchungswünsche bewusst gesperrt.
+6. Vor Aktivierung verbindlicher Buchungen: vollständiges Impressum, Datenschutzhinweise, rechtlich überprüfte Rücktrittsbedingungen, E2E-Test und Missbrauchsschutz ergänzen.
+7. WICHTIG: ENABLE_REQUESTS startet personenbezogene Datenspeicherung. Vor öffentlichem Einsatz sind vollständige Datenschutzhinweise und Kontaktangaben erforderlich.
+8. Gastmails an echte Empfänger nur nach Endtest. Rate limit derzeit nur per E-Mail, nicht hinreichender Bot-Schutz für öffentliches Formular.
+9. Rechtlich relevante Nutzerangaben nicht im Quellcode oder in öffentlichen GitHub-Dateien erfinden.
