@@ -1,0 +1,11 @@
+VALERIA – ADMIN EINRICHTEN (V5)
+
+1) Die NEUEN/GEÄNDERTEN Dateien ins GitHub Repository Hauptverzeichnis hochladen (ZIP NICHT hochladen), Commit changes. Der Live-Admin ist bis Schritt 4 gesperrt.
+2) Cloudflare Dashboard -> Storage & databases -> D1 -> Create database: valeria-db
+3) In der D1 Datenbank -> Console: Inhalt von schema.sql ausführen, danach Inhalt von seed-2027.sql ausführen. Damit sind 19 Törns eingetragen, freie Kojen zunächst unbekannt.
+4) Workers & Pages -> valeria-sailing -> Settings -> Bindings -> Add -> D1 database: Variable name DB, Datenbank valeria-db auswählen. Einstellungen speichern / neues Deployment auslösen.
+5) Settings -> Variables and Secrets -> Add -> Secret, Name ADMIN_TOKEN, Wert einen LANGEN ZUFÄLLIGEN Geheimschlüssel (mindestens 32 Zeichen) setzen. NICHT auf GitHub speichern, NICHT im Chat posten! Deployment erneut auslösen.
+6) https://valeria-sailing.pages.dev/admin.html öffnen, Schlüssel eingeben. Danach Kojen und Törns bearbeiten.
+7) WICHTIG: Für zusätzlichen Schutz in Cloudflare Zero Trust -> Access -> Applications eine Self-hosted Anwendung erstellen, die https://valeria-sailing.pages.dev/admin.html UND https://valeria-sailing.pages.dev/api/admin/* schützt. Nur deine eigene E-Mail erlauben. Das Admin-API ist zusätzlich bereits durch ADMIN_TOKEN geschützt.
+
+Achtung: Keine Zahlung oder finale Buchungsfreigabe in V5. E-Mail-Benachrichtigung ist noch nicht integriert; neue Anfragen müssen bis dahin regelmäßig im Adminbereich geprüft werden. Impressum/Datenschutz/Buchungsbedingungen vor produktiven Buchungen vervollständigen.

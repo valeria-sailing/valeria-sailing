@@ -7,3 +7,11 @@ VALERIA WEBSEITE V4 — 1. November 2026
 WICHTIG: Buchungssystem, Zahlung und Cloudflare D1 sind noch NICHT aktiv. Anfrage geht vorläufig über HandGegenKoje.
 
 UPDATE: Dateien dieses Pakets im GitHub-Hauptordner hochladen und vorhandene Dateien ersetzen (vor allem app.js, index.html und styles.css). Anschließend Cloudflare-Deployment kontrollieren.
+
+
+V6 – Personenbilder entfernt:
+Alle Fotos mit Personen wurden aus dem Paket entfernt; die Galerie listet nur die sieben verbleibenden Bilder.
+WICHTIG: GitHub löscht beim Hochladen anderer Dateien nicht automatisch die alten Fotos.
+Bitte die folgenden alten Bilder auf GitHub unter images/ separat löschen:
+000111.webp, 000131.webp, 000159.webp, 000330.webp, 000538.webp, 000614.webp, 000775.webp, 000825.webp, 000924.webp
+Das ist für den Datenschutz wichtig, damit die bisherigen URLs nicht weiter aufrufbar sind.
