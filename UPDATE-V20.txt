@@ -1,0 +1,27 @@
+VALERIA SAILING — V20 (Weiterentwicklung von V19)
+
+BASIS: Vom Nutzer hochgeladene Valeria-Webseite-V19-Premium-Design(1).zip
+
+BEIBEHALTEN (unverändert):
+- V19 Premium-Design, Layout, Farben, Schriften, Texte und Navigation
+- Törn- und Anfrage-Verwaltung (app.js)
+- Cloudflare Pages Functions, Adminbereich, E-Mail-Konfiguration
+- Mehrsprachigkeit DE / EN / RU (ui.js)
+- Impressum, Datenschutz und Buchungshinweise
+- Original-Revierkarte
+
+NEU:
+- 244 positiv bewertete Web-Fotos aus vier Archiven (images/favoriten/)
+- Neue Bilder für Startseite, Bordleben, Revier, Bildband und Korinth-Kanal
+- Vollständige filterbare Bildergalerie mit Nachladen (18 pro Schritt)
+- Großbildansicht mit Zurück / Weiter und Tastaturnavigation
+- Neue Galerie basiert auf den vom Nutzer hochgeladenen Bewertungen
+
+Nicht ergänzt: weitere Delfinfotos (bisher nicht verifiziert)
+
+GITHUB / CLOUDFLARE PAGES:
+Alle Dateien und Ordner aus dem ZIP in die Wurzel des bestehenden GitHub-Repositories hochladen.
+Den bestehenden functions/-Ordner, schema.sql und seed-2027.sql nicht löschen.
+Keine Cloudflare-Umgebungsvariablen oder Bindings ändern.
+
+Bitte vor Upload einen Commit/Backup von V19 bewahren.

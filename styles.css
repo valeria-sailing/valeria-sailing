@@ -74,3 +74,25 @@ footer{padding:55px 6%;border-top:1px solid #ffffff18}
 @media(max-width:960px){.trip-row{grid-template-columns:minmax(0,1fr) auto;gap:9px;padding:16px}.trip-date{grid-column:1;grid-row:1}.trip-route{grid-column:1;grid-row:2}.trip-availability{grid-column:1;grid-row:3;justify-self:start}.trip-action{grid-column:2;grid-row:1 / span 3;align-self:center}}
 @media(max-width:650px){.route-map-section .illustrated-map{overflow:hidden}.route-map-section .illustrated-map img{display:block;width:100%;max-width:100%;height:auto}}
 @media(max-width:540px){.trip-row{grid-template-columns:1fr}.trip-action{grid-column:1;grid-row:auto}}
+
+/* VALERIA V20 – evolutionary image and gallery update; original V19 premium design kept */
+.hero{background-image:url('images/favoriten/A3-valeria-002985.webp');background-position:center 46%;}
+.photo-large{background-image:url('images/favoriten/A3-valeria-002985.webp');}
+.photo-small{background-image:url('images/favoriten/A2-valeria-001840.webp');}
+.canal-art{min-height:450px;position:relative;border-radius:2px;overflow:hidden;}
+.canal-art .canal-cliffs{display:none}
+.canal-art span{position:absolute;bottom:22px;left:25px;padding:9px 13px;background:#17374499;color:#fff;letter-spacing:.13em;font-size:11px}
+.gallery-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:22px 0 28px}
+.gallery-filters{display:flex;flex-wrap:wrap;gap:9px}
+.gallery-chip{border:1px solid #cbd4d2;background:transparent;color:#244853;border-radius:100px;padding:10px 15px;cursor:pointer;font:600 12px 'DM Sans',sans-serif;transition:.2s}
+.gallery-chip:hover,.gallery-chip.active{background:#153844;border-color:#153844;color:#fff}
+.gallery-count{color:#738486;font-size:12px}
+.gallery-more{display:block;margin:34px auto 0;padding:16px 28px;border:1px solid #153844;background:transparent;color:#153844;cursor:pointer;font:600 12px 'DM Sans',sans-serif;letter-spacing:.08em}
+.gallery-more:hover{background:#153844;color:#fff}
+.gallery-more[hidden]{display:none}
+.gallery-item img{object-position:center}
+.modal .photo-step{position:absolute;z-index:2;top:50%;transform:translateY(-50%);background:#f8f6f0c9;color:#153844;border:0;width:46px;height:56px;font-size:38px;cursor:pointer}
+.modal #photoPrev{left:20px;right:auto}
+.modal #photoNext{right:20px;left:auto}
+.modal .photo-caption{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);color:white;background:#0c2636c9;padding:8px 18px;border-radius:20px;font-size:12px;max-width:90%;text-align:center}
+@media(max-width:700px){.gallery-chip{padding:8px 11px}.gallery-toolbar{align-items:flex-start}.modal .photo-step{width:38px;height:46px;font-size:29px}.modal #photoPrev{left:2px}.modal #photoNext{right:2px}.canal-art{min-height:330px}}
