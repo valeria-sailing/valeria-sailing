@@ -24,3 +24,4 @@ Formular mit Statusabfrage und D1-Speicherung (erst nach Setzen ENABLE_REQUESTS=
 
 
 V10: Automatischer iCloud-Versand bei Anfrage/Buchungswunsch vorbereitet. Siehe SETUP-V10.txt.
+x
