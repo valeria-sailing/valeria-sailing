@@ -206,3 +206,10 @@ body.map-zoom-open{overflow:hidden}
   .route-map-section .valeria-route-map.is-expanded{inset:3vh 2vw!important;width:96vw!important;height:94vh!important;padding:4px}
 }
 @media(prefers-reduced-motion:reduce){.intro-seascape img{transition:none}}
+
+/* V26 – two editorial photos link directly to selected gallery categories */
+.map-photo-pair>a{display:block;min-width:0;border-radius:12px;outline-offset:4px}
+.map-photo-pair>a figure{width:100%;margin:0}
+.map-photo-pair>a img{transition:transform .35s ease,filter .35s ease}
+.map-photo-pair>a:hover img,.map-photo-pair>a:focus-visible img{transform:scale(1.05);filter:saturate(1.08)}
+.map-photo-pair>a figcaption{pointer-events:none}
