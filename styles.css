@@ -213,3 +213,29 @@ body.map-zoom-open{overflow:hidden}
 .map-photo-pair>a img{transition:transform .35s ease,filter .35s ease}
 .map-photo-pair>a:hover img,.map-photo-pair>a:focus-visible img{transform:scale(1.05);filter:saturate(1.08)}
 .map-photo-pair>a figcaption{pointer-events:none}
+
+/* Route and responsive spacing corrections */
+.section>*{min-width:0}
+.intro-grid,.lifestyle-layout,.contact,.canal{gap:clamp(24px,5vw,72px)}
+.hero{height:auto;min-height:94vh;max-height:none}.hero-inner{padding-bottom:72px}.hero-foot{margin-top:60px;flex-wrap:wrap}
+.nav{gap:16px}.nav nav{gap:clamp(10px,1.4vw,20px)}
+.trip-row,.trip-row.has-availability{grid-template-columns:minmax(150px,1fr) minmax(180px,1.5fr) minmax(120px,.8fr) minmax(135px,.9fr);gap:16px}
+.trip-row:not(.has-availability){grid-template-columns:minmax(150px,1fr) minmax(180px,2fr) minmax(135px,.9fr)}
+.trip-date,.trip-action{white-space:normal}.trip-availability{overflow-wrap:anywhere}
+.route-map-section{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start}
+.route-map-section .route-heading{grid-column:1/-1;display:block;max-width:850px;margin:0}
+.route-map-section .illustrated-map{grid-column:1;grid-row:2;max-width:none;width:100%;margin:0;justify-self:stretch;top:auto}
+.route-map-section .map-photo-pair{grid-column:1/-1;grid-row:3;width:100%;max-width:none;margin:8px 0 0}
+.route-photo-panel{grid-column:2;grid-row:2;min-width:0;background:white;border:1px solid #d6e2dd;border-radius:16px;overflow:hidden}
+.route-destination-photo{margin:0}.route-destination-photo>img{width:100%;aspect-ratio:3/2;height:auto;display:block;object-fit:contain;background:#e2ece8}
+.route-destination-photo figcaption{padding:22px}.route-destination-photo h3{font:400 28px/1.25 'Playfair Display',serif;margin:12px 0}.route-destination-photo p{font-size:16px;line-height:1.65;margin:10px 0}
+.route-destination-photo .route-credit{font-size:12px;overflow-wrap:anywhere}.route-credit a{text-decoration:underline}
+.route-controls{display:flex;gap:12px;padding:0 22px 18px}.route-controls button,.route-controls select{font:inherit;font-size:14px;border:1px solid #b5cbc4;border-radius:8px;padding:10px;min-width:0;background:#faf8f3;color:#103441}.route-controls select{flex:1}.route-controls button{cursor:pointer}
+.route-photo-note{font-size:12px;line-height:1.6;margin:0;padding:0 22px 22px;color:#5d7075}
+#ionian-map .photo-stop-pin{fill:#d5b37c;stroke:#fff;stroke-width:2;cursor:pointer}#ionian-map .photo-stop-pin.active{fill:#e99f37;stroke-width:4}
+#ionian-map .photo-stop-pin:focus{outline:none;stroke:#ffdf63;stroke-width:5}
+@media(max-width:1100px){.nav nav{display:none}.nav-toggle{display:block}.nav.is-open nav{display:flex;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;background:#103441;padding:20px;border-radius:14px}.trip-row,.trip-row.has-availability{grid-template-columns:minmax(0,1fr) minmax(120px,auto)}.trip-date{grid-column:1;grid-row:1}.trip-route{grid-column:1;grid-row:2}.trip-availability{grid-column:1;grid-row:3}.trip-action{grid-column:2;grid-row:1/span 3}.trip-row:not(.has-availability){grid-template-columns:minmax(0,1fr) auto}}
+@media(max-width:800px){.route-map-section{display:grid;grid-template-columns:minmax(0,1fr)}.route-map-section .illustrated-map{grid-column:1;grid-row:2;width:100%;max-width:none;margin:0}.route-photo-panel{grid-column:1;grid-row:3}.route-map-section .map-photo-pair{grid-row:4}.lifestyle-layout,.canal,.intro-grid,.contact{grid-template-columns:minmax(0,1fr)}.region-top{display:block}.offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.trip-row,.trip-row.has-availability,.trip-row:not(.has-availability){grid-template-columns:minmax(0,1fr)}.trip-action{grid-column:1;grid-row:4}.offer-grid{grid-template-columns:minmax(0,1fr)}.route-controls{flex-wrap:wrap}.route-controls select{width:100%}.hero-inner{padding-top:160px}.hero h1{font-size:clamp(40px,10vw,60px)}}
+
+.special-photo{margin:16px 0 24px}.special-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#0b2c38;border-radius:12px}.special-photo figcaption{font-size:12px;line-height:1.6;margin-top:10px;color:#d0dddd}.special-photo a{text-decoration:underline}
