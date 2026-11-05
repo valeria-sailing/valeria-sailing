@@ -253,3 +253,33 @@ body.map-zoom-open{overflow:hidden}
 #ionian-map .route-stop-label{cursor:pointer}
 #ionian-map .route-stop-label:hover{fill:#8a5d21}
 @media(prefers-reduced-motion:reduce){.route-destination-photo>img{transition:none}}
+
+/* Full photo and compact welcome section */
+#experience{padding-top:56px;padding-bottom:56px}
+#experience .intro-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,52px);align-items:center;margin-top:20px}
+#experience .intro-seascape{max-width:none;height:auto;overflow:visible;align-self:center}
+#experience .intro-seascape img{display:block;width:100%;height:auto;object-fit:contain;border-radius:13px}
+#experience .intro-seascape:after{display:none}
+#experience h2{font-size:clamp(40px,4.4vw,62px);line-height:1.1;margin:0 0 18px}
+#experience .intro-copy p{margin:12px 0}
+#experience .intro-copy .lead{font-size:20px!important;line-height:1.6!important}
+#experience .text-link{margin-top:8px}
+#experience .stats{margin-top:24px;padding-top:18px;gap:12px;grid-template-columns:repeat(4,minmax(0,1fr))}
+#experience .stats>div{padding:0}
+#experience .stats strong{font-size:36px;line-height:1.1}
+#experience .stats span{font-size:12px;letter-spacing:.02em;line-height:1.45;margin-top:5px}
+@media(max-width:800px){
+ #experience{padding-top:40px;padding-bottom:40px}
+ #experience .intro-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:start}
+ #experience h2{font-size:40px}
+ #experience .intro-copy .lead{font-size:18px!important}
+ #experience .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media(max-width:600px){
+ #experience .intro-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ #experience .intro-seascape{width:100%;max-width:360px;justify-self:center}
+ #experience h2{font-size:42px;margin-bottom:14px}
+ #experience .stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+ #experience .stats strong{font-size:30px}
+ #experience .stats span{font-size:11px}
+}
