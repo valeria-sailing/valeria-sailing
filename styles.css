@@ -239,3 +239,17 @@ body.map-zoom-open{overflow:hidden}
 @media(max-width:540px){.trip-row,.trip-row.has-availability,.trip-row:not(.has-availability){grid-template-columns:minmax(0,1fr)}.trip-action{grid-column:1;grid-row:4}.offer-grid{grid-template-columns:minmax(0,1fr)}.route-controls{flex-wrap:wrap}.route-controls select{width:100%}.hero-inner{padding-top:160px}.hero h1{font-size:clamp(40px,10vw,60px)}}
 
 .special-photo{margin:16px 0 24px}.special-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#0b2c38;border-radius:12px}.special-photo figcaption{font-size:12px;line-height:1.6;margin-top:10px;color:#d0dddd}.special-photo a{text-decoration:underline}
+
+/* Every mapped stop has its own photo, including the Rio-Antirrio passage. */
+.route-destination-photo>img{aspect-ratio:3/2;object-fit:cover;transition:opacity .2s ease}
+.route-photo-panel.is-loading .route-destination-photo>img{opacity:.45}
+.route-destination-photo>img[hidden]{display:none}
+.route-credit [hidden],#routePhotoError[hidden]{display:none!important}
+#ionian-map .route-stop{cursor:pointer}
+#ionian-map .route-stop .photo-stop-pin{pointer-events:none;fill:#d5b37c;stroke:#fff6df;stroke-width:2}
+#ionian-map .route-stop.active .photo-stop-pin{r:8;fill:#edab49;stroke-width:3}
+#ionian-map .route-stop:focus{outline:none}
+#ionian-map .route-stop:focus .photo-stop-pin{stroke:#ffe068;stroke-width:5}
+#ionian-map .route-stop-label{cursor:pointer}
+#ionian-map .route-stop-label:hover{fill:#8a5d21}
+@media(prefers-reduced-motion:reduce){.route-destination-photo>img{transition:none}}
