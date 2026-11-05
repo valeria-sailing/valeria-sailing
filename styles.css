@@ -147,3 +147,62 @@ form label,form .check,form input:not([type=checkbox]),form select,form textarea
 .valeria-route-map>svg{display:block;width:100%;height:auto;max-width:100%;border-radius:17px;overflow:visible}
 #valeria-boat{filter:drop-shadow(0 2px 5px #002f40);pointer-events:none}
 @media(max-width:650px){.route-map-section .valeria-route-map{overflow-x:auto}.route-map-section .valeria-route-map>svg{min-width:880px;width:880px;max-width:none}}
+
+/* ===== VALERIA V25 — readability, quieter route map and editorial seascape ===== */
+/* Increase only captions, metadata, paragraphs and controls. Hero and section headings stay unchanged. */
+body{font-size:18px;line-height:1.72}
+.nav nav,.nav nav a{font-size:15px}
+.nav-cta,.hero-actions .btn,.btn,.btn-dark,.text-link,.trip-action,.gallery-chip,.gallery-more,.coming a{font-size:15px}
+.logo span,.nav .logo span{font-size:11px}
+.section-kicker,.eyebrow,.hero .eyebrow,.form-eyebrow,.special-number,.destination span,.offer-grid article>span{font-size:15px;letter-spacing:.12em}
+.hero-foot span,.stats span,.gallery-count,.gallery-item span,.gallery-item figure figcaption,.map-photo-pair figure figcaption,.top-note{font-size:15px}
+.intro p,.intro-grid p:not(.lead),.lifestyle-layout p,.detail-offer p,.offer-grid p,.offer-bottom,.destination p,.specials p,.canal-copy p,.region-lead,.region-strap,.map-lead,.map-caption,.gallery-head p,.review-intro,.review-card p,.reviews-overview-copy p,.notice,.quote p,.contact p,.contact-personal p,.booking-steps p,.booking-info,.booking-terms p,.booking-disclaimer,.payment-note{font-size:17px!important;line-height:1.75}
+.intro .lead,.lifestyle .lead{font-size:21px!important}
+.trip-date,.trip-route,.trip-availability,.trip-card p,.trip-card .tag,.trip-card a,.review-author,.reviews-overview-copy strong,.reviews-source,.notice strong,.coming p{font-size:16px!important}
+.trip-route{font-size:18px!important}
+form label,form .check,#requestForm .form-intro p,#formStatus,form input:not([type=checkbox]),form select,form textarea,.booking-terms summary{font-size:16px!important}
+.gallery-chip,.gallery-more{font-size:15px}
+footer,footer a{font-size:15px}
+footer .logo span{font-size:10px}
+/* A real Valeria photo fills the formerly empty area beneath "Dein Platz am Meer." */
+.intro-heading-stack{display:flex;flex-direction:column;align-items:stretch;gap:25px;min-width:0}
+.intro-seascape{margin:0;width:100%;max-width:550px;height:265px;position:relative;overflow:hidden;border-radius:13px;box-shadow:0 16px 40px #12313c1b;background:#d9e7e5}
+.intro-seascape img{width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block}
+.intro-seascape:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#092c3c35,transparent 52%)}
+/* The map is an optional aside, not the main attraction. Geographic artwork remains intact. */
+.route-map-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,365px);gap:clamp(25px,4.3vw,64px);align-items:center}
+.route-map-section .map-story{display:block;min-width:0;width:100%;max-width:700px}
+.route-map-section .section-heading{max-width:650px}
+.route-map-section .map-lead,.route-map-section .map-caption{max-width:600px}
+.route-map-section .map-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:min(100%,600px);max-width:600px;margin:25px 0 0}
+.route-map-section .map-photo-pair figure{height:155px}
+.route-map-section .illustrated-map{grid-column:2;grid-row:1;width:100%;max-width:365px;margin:0;justify-self:end;position:relative;overflow:hidden;border:1px solid #cbded9;border-radius:15px;box-shadow:0 12px 32px #092f3b18;background:#105d70}
+.route-map-section .valeria-route-map>svg{display:block;width:100%;height:auto;max-width:100%;min-width:0;overflow:hidden;border-radius:15px}
+.route-map-section #valeria-boat{filter:drop-shadow(0 2px 5px #002934);pointer-events:none}
+.map-zoom-toggle{position:absolute;right:11px;bottom:11px;z-index:3;background:#fdfaf2ed;color:#123845;border:1px solid #fff8;padding:9px 12px;border-radius:8px;font:700 14px 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 4px 12px #0829344d}
+.map-zoom-toggle:hover{background:#fff}
+.route-map-section .valeria-route-map.is-expanded{position:fixed!important;inset:4vh 4vw!important;z-index:1000;width:92vw!important;height:92vh!important;max-width:none!important;max-height:none!important;margin:0!important;padding:12px;background:#0e586b;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 100vmax #001921ce;overflow:auto;border-radius:15px}
+.route-map-section .valeria-route-map.is-expanded>svg{display:block;width:auto;max-width:100%;max-height:100%;height:auto;aspect-ratio:1200 / 865;object-fit:contain;border-radius:10px}
+.route-map-section .valeria-route-map.is-expanded .map-zoom-toggle{position:fixed;right:calc(4vw + 22px);bottom:calc(4vh + 22px)}
+body.map-zoom-open{overflow:hidden}
+@media(max-width:1050px){
+  .route-map-section{grid-template-columns:minmax(0,1fr) minmax(0,325px);gap:26px}
+  .route-map-section .illustrated-map{max-width:325px}
+}
+@media(max-width:800px){
+  .route-map-section{display:block}
+  .route-map-section .map-story{max-width:none}
+  .route-map-section .illustrated-map{width:min(100%,540px);max-width:540px;margin:24px auto 0;justify-self:center}
+  .route-map-section .valeria-route-map>svg{min-width:0;width:100%;max-width:100%}
+  .intro-seascape{max-width:100%;height:250px}
+}
+@media(max-width:560px){
+  body{font-size:17px}
+  .intro-seascape{height:215px}
+  .route-map-section .illustrated-map{width:100%;max-width:100%;margin:20px auto 0;overflow:hidden}
+  .route-map-section .valeria-route-map>svg{width:100%;min-width:0;max-width:100%;height:auto}
+  .route-map-section .map-photo-pair figure{height:130px}
+  .map-zoom-toggle{font-size:14px}
+  .route-map-section .valeria-route-map.is-expanded{inset:3vh 2vw!important;width:96vw!important;height:94vh!important;padding:4px}
+}
+@media(prefers-reduced-motion:reduce){.intro-seascape img{transition:none}}
