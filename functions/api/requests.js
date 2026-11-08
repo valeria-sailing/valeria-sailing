@@ -24,7 +24,7 @@ export async function onRequestPost({request,env}) {
   const dupe=await env.DB.prepare("SELECT id FROM requests WHERE email=? AND trip_id=? AND kind=? AND created_at>=datetime('now','-2 minutes') LIMIT 1").bind(email,trip,kind).first();
   if(dupe)return json({error:'This request has already been received.'},409);
   if(trip!=='general'){
-    const row=await env.DB.prepare("SELECT available_places FROM trips WHERE id=? AND published=1 AND end_date>=date('now')").bind(trip).first();
+    const row=await env.DB.prepare("SELECT CASE WHEN t.available_places IS NULL THEN NULL ELSE MAX(0,t.available_places-COALESCE((SELECT SUM(r.guests) FROM requests r WHERE r.trip_id=t.id AND r.status='approved'),0)) END AS available_places FROM trips t WHERE t.id=? AND t.published=1 AND t.end_date>=date('now')").bind(trip).first();
     if(!row)return json({error:'Trip unavailable'},409);
     if(row.available_places!==null&&row.available_places<guests)return json({error:'Not enough places available'},409);
   }

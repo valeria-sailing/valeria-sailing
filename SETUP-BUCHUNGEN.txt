@@ -1,10 +1,17 @@
-VALERIA – VERSION 7: BUCHUNGSANFRAGEN
+VALERIA – BUCHUNGSVERWALTUNG
 
-1. Lade alle V7-Dateien ins GitHub-Repository hoch (Unterordner beibehalten). Cloudflare Pages deployt automatisch.
-2. In Cloudflare muss D1 als DB gebunden sein. Tabellen trips und requests existieren bereits.
-3. Wichtig: Das Formular ist zunächst ABSICHTLICH DEAKTIVIERT, bis Impressum, Datenschutz und Buchungsbedingungen tatsächlich ausgefüllt und geprüft sind. Die Datei legal.html enthält noch Platzhalter. Vor Aktivierung unbedingt anpassen.
-4. Danach: Cloudflare Pages -> Settings -> Variables and Secrets: ENABLE_REQUESTS als Textvariable mit Wert true anlegen (Production). Neu deployen.
-5. Ein Test über die Website speichert eine Anfrage in D1 requests. Unter /admin.html im Verwaltungsbereich erscheinen neue Anfragen. Keine E-Mail-Benachrichtigung, keine Zahlungsabwicklung und keine automatische Zusage in V7.
-6. Alle Wünsche sind status=pending. Es werden keine Kojen automatisch reserviert oder bezahlt.
-7. Sichere Funktionen gegen automatisierte Massenanfragen (Cloudflare Turnstile/Rate limiting) vor breiter Bewerbung ergänzen. Aktuell nur Honeypot und Inputprüfung.
-8. Datenschutz: Gäste-Daten werden in D1 gespeichert. Aufbewahrung, Löschung und Datenschutzhinweise erforderlich. Datenschutzseite ist noch nicht fertig.
+Die Website nutzt das vorhandene Cloudflare-D1-System und den vorhandenen iCloud-Versand. Kein zusätzliches Buchungsanbieter-Abo, kein neues Konto für Gäste. Hosting und E-Mail bleiben an die Bedingungen der bestehenden Dienste gebunden. Keine neue Datenbankmigration nötig.
+
+1. /admin.html öffnen und mit dem bestehenden Admin-Schlüssel anmelden.
+2. Für jeden Törn das Online-Kontingent festlegen: maximal vier Plätze abzüglich bereits außerhalb der Webseite belegter Plätze. Keine Annahmen über bestehende Buchungen treffen. Ein unbekanntes Kontingent verhindert Bestätigungen.
+3. Anfragen erscheinen als „Neu“. „Kontaktiert“ oder „Abgelehnt“ belegt keine Plätze.
+4. „Bestätigt“ auswählen und den Dialog bestätigen. Erst diese persönliche Zusage belegt die Plätze. Der Server prüft das Kontingent atomar; konkurrierende Buchungen können es nicht überschreiten. Bei aktivem iCloud-Versand wird dem Gast eine Bestätigung in seiner Formularsprache gesendet. Der Verwaltungsbereich zeigt an, ob der Versand erfolgreich war.
+5. Eine bestätigte Buchung kann über „Storniert“ aufgehoben werden. Ihre Plätze werden wieder frei. Bei aktivem Versand wird der Gast benachrichtigt. Eine Wiederholung derselben Statusänderung belegt/befreit keine zusätzlichen Plätze und verschickt keine zweite Nachricht.
+6. Falls eine E-Mail nicht verschickt wurde, den Gast persönlich informieren. Die Buchung bleibt gespeichert.
+7. Zahlungen und Zahlungsdetails werden persönlich abgestimmt. Die bestehende Zahlungskonfiguration und der Schalter für verbindliche Buchungsangebote wurden nicht verändert.
+
+Kontingent bedeutet: aktuelle freie Plätze PLUS bereits in dieser Verwaltung bestätigte Onlinebuchungen. Beispiel: Kontingent 4, zwei Personen bestätigt => zwei Plätze frei. Eine neue externe Buchung für eine Person: Kontingent auf 3 setzen => ein Platz frei. Das Kontingent darf nicht unter die Zahl bestätigter Onlinebuchungen fallen.
+
+Technisch bleibt trips.available_places das Kontingent. Öffentliche Verfügbarkeit und Anfrageprüfung ziehen die Personen aller requests mit Status approved ab. Dadurch erfordern Bestätigungen und Stornierungen keine getrennten Änderungen an zwei Tabellen.
+
+Prüfung: node tests/booking.test.mjs (Node mit node:sqlite-Unterstützung).
