@@ -236,6 +236,7 @@ const stops=[
     "desc": "Boote, sanfte Abendfarben und Häuser rund um das Wasser: der alte Hafen von Spetses als stimmungsvoller Abschluss im Saronischen Revier."
   }
 ];
+window.valeriaRoutePhotos=stops;
 const svg=document.getElementById('ionian-map'),route=document.getElementById('valeria-route');
 const select=document.getElementById('routeStop'),pause=document.getElementById('routePause');
 const panel=document.querySelector('.route-photo-panel'),image=document.getElementById('routePhoto');
